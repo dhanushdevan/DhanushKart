@@ -1,0 +1,84 @@
+{
+  "phones": [
+    {
+      "id": 1,
+      "name": "Samsung Galaxy S25 Ultra",
+      "description": "The flagship Android experience with an incredible 200MP quad-camera system, S Pen support, and a bright Dynamic AMOLED 2X display.",
+      "price": 1299.99,
+      "quantity_in_stock": 45,
+      "image_url": "https://avatars.mds.yandex.net/get-mpic/11401947/2a00000194bc5d1b7e849fa54831571942e7/orig"
+    },
+    {
+      "id": 2,
+      "name": "Apple iPhone 17 Pro Max",
+      "description": "Apple's top-tier phone with the A19 Pro chip, advanced triple-camera system, and an anti-reflective 6.9-inch Super Retina XDR display.",
+      "price": 1499.99,
+      "quantity_in_stock": 62,
+      "image_url": "https://www.findgsm.com/uploads/gadgets/appleiphone17promax-b8ebbb.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Google Pixel 10 Pro XL",
+      "description": "Features the Google Tensor G5 chip, best-in-class computational photography, and exclusive AI features for a pure Android experience.",
+      "price": 1099.00,
+      "quantity_in_stock": 30,
+      "image_url": "https://mobileworld.com.vn/uploads/product/07_2025/pixel%2010%20pro.jpg"
+    },
+    {
+      "id": 4,
+      "name": "OnePlus 13",
+      "description": "A high-performance phone known for its speed, 100W Super VOOC fast charging, and a fluid 6.82-inch LTPO AMOLED display.",
+      "price": 899.00,
+      "quantity_in_stock": 75,
+      "image_url": "https://www.mobiledokan.co/wp-content/uploads/2023/02/OnePlus-12-White.webp"
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy Z Fold 7",
+      "description": "A cutting-edge foldable smartphone with a massive 8-inch main display and a durable, thin design for ultimate productivity.",
+      "price": 1799.00,
+      "quantity_in_stock": 20,
+      "image_url": "https://lh3.googleusercontent.com/ErDF1TAQrpLFVITI2q9DIvhyTtIQ50L3HzWlIr7RvTh9V4oeu-uZUcFQVBxyITChLndbYgUooX1DIjcOR5ZzmqGD-XSOKJYX=rw"
+    },
+    {
+      "id": 6,
+      "name": "Apple iPhone 17",
+      "description": "The standard flagship offering with an upgraded 1-120Hz display, powerful A19 chip, and robust software support.",
+      "price": 829.00,
+      "quantity_in_stock": 90,
+      "image_url": "https://www.findgsm.com/uploads/gadgets/appleiphone17promax-b8ebbb.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Motorola Razr Ultra (2025)",
+      "description": "A stylish flip-style foldable phone with a large external display and fast 68W wired and 30W wireless charging capabilities.",
+      "price": 1199.00,
+      "quantity_in_stock": 25,
+      "image_url": "https://tse4.mm.bing.net/th/id/OIP.O90TK9R-KLAbQ3GgssApXwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3"
+    },
+    {
+      "id": 8,
+      "name": "Xiaomi 15 Ultra",
+      "description": "An international flagship known for its large 5410mAh battery and incredibly fast 90W Hyper Charging, featuring a premium camera array.",
+      "price": 1150.00,
+      "quantity_in_stock": 35,
+      "image_url": "https://xiaomicali.com/wp-content/uploads/2025/06/XIAOMI-15-ULTRA.png"
+    },
+    {
+      "id": 9,
+      "name": "Google Pixel 9a",
+      "description": "The best bargain phone with great camera quality and the same processing power as other Pixel 9 models, making it excellent value.",
+      "price": 499.00,
+      "quantity_in_stock": 110,
+      "image_url": "https://www.imobily.eu/image/cache/catalog/Google/Pixel9a/Iris/1-800x800.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Samsung Galaxy S25 FE",
+      "description": "The 'Fan Edition' offering a balanced mix of flagship features, including a 120Hz AMOLED screen and 45W charging, at a lower price point.",
+      "price": 649.99,
+      "quantity_in_stock": 88,
+      "image_url": "https://static.androidplanet.nl/orca/products/27057/samsung-galaxy-s25-fe.png"
+    }
+  ]
+}

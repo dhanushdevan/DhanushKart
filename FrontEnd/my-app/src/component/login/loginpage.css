@@ -1,0 +1,124 @@
+.login-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.login-container{
+ background-color: #f5f5f5;
+     padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.form-login{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    gap: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    align-items: center;
+}
+
+/* Floating label input groups */
+.input-group{
+    position: relative;
+    width: 100%;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 14px 12px 14px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    background: transparent;
+}
+
+.input-group input:focus{
+    border-color: #6666ff;
+    box-shadow: 0 0 0 3px rgba(102,102,255,0.08);
+}
+
+/* Use placeholder " " on input and :placeholder-shown to detect empty */
+.input-group label{
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    padding: 0 6px;
+    color: #777;
+    transition: all 0.18s ease-in-out;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label{
+    top: -8px;
+    transform: translateY(0);
+    font-size: 0.75rem;
+    color: #333;
+    background: white;
+}
+
+.btn-login{
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background-color: #333399;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-login:hover{
+    background-color: #2b2b8f;
+}
+
+.form-signup{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    gap: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    align-items: center;
+}
+
+.btn-signup{
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 1rem;
+    background-color: #333399;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-signup:hover{
+    background-color: #2b2b8f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px){
+    .form-login, .form-signup{
+        width: 100%;
+        padding: 24px;
+        gap: 16px;
+    }
+    .login-page{
+        padding: 12px;
+    }
+}

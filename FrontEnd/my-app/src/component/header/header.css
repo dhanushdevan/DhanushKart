@@ -1,0 +1,139 @@
+
+.forAllHeader{
+    background: linear-gradient(90deg, #ffffff 0%, #f7f8ff 100%);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+}
+
+.header{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 12px 20px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-logo{
+    height: 48px;
+    width: 48px;
+}
+
+.brand-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title{
+    font-weight: 700;
+    color: #1f2d6b;
+    font-size: 1.05rem;
+}
+
+.brand-sub{
+    font-size: 0.75rem;
+    color: #667;
+}
+
+.nav{
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav a{
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+.nav a:hover{
+  background: rgba(31,45,107,0.06);
+}
+
+.nav a.active{
+  color: #1f2d6b;
+  background: rgba(31,45,107,0.1);
+  font-weight: 700;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search input{
+    border: 1px solid #e0e0f0;
+    padding: 8px 12px;
+    border-radius: 20px;
+    width: 220px;
+    transition: box-shadow 0.15s ease, width 0.2s ease;
+}
+
+.search input:focus{
+    outline: none;
+    box-shadow: 0 6px 18px rgba(31,45,107,0.08);
+    width: 280px;
+}
+
+.icon{
+    color: #1f2d6b;
+    text-decoration: none;
+    padding: 6px 8px;
+}
+
+.cart{ position: relative; }
+.badge{
+    display:inline-block;
+    background: #ff4d4f;
+    color:white;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 12px;
+    margin-left: 6px;
+}
+
+.hamburger{
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Mobile styles */
+@media (max-width: 880px){
+    .search input{ display:none; }
+    .nav{ display:none; }
+    .hamburger{ display: inline-flex; }
+    .nav.open{
+        display:flex;
+        position: absolute;
+        left: 12px;
+        right: 12px;
+        top: 72px;
+        background: white;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(31,45,107,0.08);
+        flex-direction: column;
+        gap: 12px;
+        z-index: 1200;
+    }
+}
+
+@media (max-width: 480px){
+    .brand-title{ font-size: 0.95rem; }
+    .brand-sub{ display:none; }
+    .brand-logo{ height:40px; width:40px; }
+    .search input{ width: 160px; }
+}

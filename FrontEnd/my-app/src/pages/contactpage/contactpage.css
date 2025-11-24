@@ -1,0 +1,37 @@
+.container{max-width:1300px;margin:0 auto;padding:18px}
+.contact-grid{display:grid;grid-template-columns:1fr 500px;gap:28px;align-items:start}
+
+.contact-info-panel{background:linear-gradient(180deg,#ffffff,#fbfdff);padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(16,24,40,0.06);border:1px solid rgba(15,23,42,0.03)}
+.contact-info-panel h2{margin:0 0 12px;font-size:28px}
+.muted{color:#56606d;line-height:1.6;font-size:15px}
+.contact-cards{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.card{flex:1 1 150px;background:#fff;padding:16px;border-radius:12px;border:1px solid #eef3f7;box-shadow:0 6px 14px rgba(18,28,45,0.03)}
+.card h3{margin:0 0 6px;font-size:14px}
+.card a{color:#1d4ed8;text-decoration:underline}
+.map-placeholder{margin-top:20px;height:150px;border-radius:10px;background:linear-gradient(90deg,#f6f9fc,#ffffff);display:flex;align-items:center;justify-content:center;color:#98a3b2;border:1px dashed #e6eef6;padding:12px}
+
+.contact-form-panel{background:#fff;padding:50px;border-radius:12px;border:1px solid #ecf4fb;box-shadow:0 8px 20px rgba(18,28,45,0.04)}
+.contact-form-panel .contact-form{display:block}
+.contact-form .form-row{display:flex;gap:40px ;margin-bottom:16px}
+.input-group{position:relative;display:block}
+.input-group input,.input-group textarea{width:100%;padding:14px 14px;border-radius:8px;border:1px solid #e6eef6;background:transparent;font-size:14px;outline:none}
+.input-group .label{position:absolute;left:14px;top:14px;color:#6b7280;pointer-events:none;transition:all .18s ease, color .12s ease;background:#fff;padding:0 6px}
+.input-group input:focus + .label,.input-group input:not(:placeholder-shown) + .label,.input-group textarea:focus + .label,.input-group textarea:not(:placeholder-shown) + .label{transform:translateY(-22px);font-size:12px;color:#1d4ed8}
+.input-group textarea{min-height:140px;resize:vertical;padding-top:18px}
+.form-actions{display:flex;align-items:center;gap:12px;margin-top:16px}
+.btn-primary{background:#1d4ed8;color:#fff;padding:10px 18px;border-radius:8px;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(29,78,216,0.12)}
+.form-success{color:#16a34a}
+.form-error{color:#dc2626}
+
+@media (max-width:900px){
+	.contact-grid{grid-template-columns:1fr}
+	.contact-form-panel{order:2}
+	.contact-info-panel{order:1}
+}
+
+@media (max-width:480px){
+	.contact-grid{gap:18px;padding:8px}
+	.input-group input,.input-group textarea{padding:12px}
+	.container{padding:16px}
+	.contact-cards{gap:10px}
+}

@@ -1,0 +1,102 @@
+.app-footer{
+  background: linear-gradient(180deg,#0f1724 0%, #0b1220 100%);
+  color: #e6eef8;
+  padding: 28px 16px 12px;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.footer-inner{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 8px;
+  flex-wrap: wrap;
+}
+
+.footer-brand h3{
+  margin: 0 0 6px 0;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.footer-brand p{
+  margin: 0;
+  color: rgba(230,238,248,0.85);
+  font-size: 0.95rem;
+}
+
+.footer-links{
+  display: flex;
+  gap: 28px;
+}
+
+.footer-links h4{
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+  color: #cfe3ff;
+}
+
+.footer-links a{
+  display: block;
+  color: rgba(230,238,248,0.9);
+  text-decoration: none;
+  margin-bottom: 6px;
+  font-size: 0.92rem;
+}
+
+.footer-newsletter h4{
+  margin: 0 0 8px 0;
+  color: #cfe3ff;
+}
+
+.newsletter-form{
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter-form input{
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  min-width: 200px;
+}
+
+.newsletter-form button{
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.footer-bottom{
+  border-top: 1px solid rgba(255,255,255,0.04);
+  margin-top: 18px;
+  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-bottom p{ margin: 0; color: rgba(230,238,248,0.7); font-size: 0.9rem; }
+
+.socials a{ color: rgba(230,238,248,0.85); margin-left: 12px; text-decoration: none; font-size: 0.9rem; }
+
+/* Make footer sticky to bottom using app layout (app container must be flex column)
+   Footer itself does not use position: fixed so it remains in document flow */
+
+@media (max-width: 768px){
+  .footer-inner{ gap: 16px; }
+  .footer-links{ gap: 18px; }
+  .newsletter-form{ flex-direction: column; align-items: stretch; }
+  .newsletter-form input{ width: 100%; }
+  .footer-bottom{ flex-direction: column; gap: 8px; align-items: center; }
+  .socials a{ margin-left: 8px; }
+}
