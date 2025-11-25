@@ -1,4 +1,4 @@
-import React from "react";
+import React, { use, useState } from "react";
 import product from "../../Data/product.json";
 import './individualproduct.css';
 import Header from "../../component/header/header";
@@ -6,10 +6,10 @@ import Header from "../../component/header/header";
 type IndividualProductProps = {
   id: number;
   /** optional callback parent can provide to receive events from this component */
-  onAddToBag?: (productId: number) => void;
+  onAddToBag?: (productId: number, isloginedin: boolean) => void;
 };
-
 function IndividualProduct({ id, onAddToBag }: IndividualProductProps) {
+  const [isloginedin, setIsloginedin] = useState(false);
 
     return(
         <div>
@@ -29,7 +29,7 @@ function IndividualProduct({ id, onAddToBag }: IndividualProductProps) {
                       flexWrap: 'wrap'
                   }}>
                     <button
-                        onClick={() => onAddToBag && onAddToBag(phone.id)}
+                        onClick={() => onAddToBag && onAddToBag(phone.id,isloginedin) }
                         style={{padding:'20px',backgroundColor:'black',color:'white',border:'none',borderRadius:'5px',cursor:'pointer',fontWeight:'bold'}}
                     >
                       Add to Bag

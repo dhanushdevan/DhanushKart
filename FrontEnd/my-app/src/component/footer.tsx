@@ -2,6 +2,17 @@ import React from 'react';
 import './footer.css';
 
 function Footer() {
+  const [toast, setToast] = React.useState<{ show: boolean; message: string }>({ show: false, message: '' });
+  
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setToast({ show: true, message: 'Thank you for subscribing!' });
+    
+    // Auto-dismiss toast after 3 seconds
+    setTimeout(() => {
+      setToast({ show: false, message: '' });
+    }, 3000);
+  };
   return (
     <footer className="app-footer">
       <div className="footer-inner">
@@ -27,10 +38,11 @@ function Footer() {
 
         <div className="footer-newsletter">
           <h4>Stay in touch</h4>
-          <form onSubmit={(e) => e.preventDefault()} className="newsletter-form">
+          <form onSubmit={handleSubscribe} className="newsletter-form">
             <input type="email" placeholder="Enter your email" aria-label="Email" />
             <button type="submit">Subscribe</button>
           </form>
+          {toast.show && <div className="toast-notification">{toast.message}</div>}
         </div>
       </div>
 

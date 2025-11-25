@@ -1,7 +1,14 @@
 .App {
   text-align: center;
 }
-
+.loading-app{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-size: 24px;
+  color: #333;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

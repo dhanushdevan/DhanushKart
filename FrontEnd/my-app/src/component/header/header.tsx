@@ -1,15 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import logo from '../../logo.svg';
 import './header.css';
-
 function Header() {
   const [open, setOpen] = useState(false);
-  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+  const locRouter = useLocation();
+  const isActive = (path: string) => locRouter.pathname === path;
 
-  const isActive = (path: string) => location.pathname === path;
-
+const loadData = async () => {
+    setLoading(true);
+    await new Promise(r => setTimeout(r, 2000)); // fake API call
+    setLoading(false);
+  };
+  useEffect(() => {
+    loadData();
+  }, []);
   return (
+    <>
     <div className="forAllHeader">
       <header className="header">
         <div className="brand">
@@ -28,7 +36,7 @@ function Header() {
         </nav>
 
         <div className="header-right">
-          <a className="icon" href="/login">Login</a>
+            <a className="icon" href="/login">Login</a>
           <a className="icon cart" href="/bag">Bag<span className="badge">0</span></a>
           <button className="hamburger" aria-label="Open menu" onClick={() => setOpen(!open)}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -38,6 +46,8 @@ function Header() {
         </div>
       </header>
     </div>
+
+    </>
   );
 }
 
