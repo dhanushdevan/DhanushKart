@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.commercial.ekart.entity.ProductEntity;
@@ -19,12 +20,14 @@ public class ProductService  implements ProductServiceInterface{
 	@Autowired
 	private ProductRepository productRepository;
 	
+	@Cacheable(value = "products",key="'products'")
 	@Override
 	public List<ProductPojo> getAllProductList() {
 		List<ProductEntity> listOfProductEntity=productRepository.findAll();
 		List<ProductPojo> listOfProductPojo= new ArrayList<>();
 		for (ProductEntity productEntity : listOfProductEntity) {
 			if(!productEntity.isDeleted()) {
+				System.out.println("Cache npot used"+productEntity.getProductId());
 			ProductPojo productPojo= new ProductPojo(productEntity.getProductId(),productEntity.getProductName(),productEntity.getDescription(),
 					productEntity.getPrice(),productEntity.getStockQuantity(),productEntity.getBrand(),productEntity.getImageUrl(),productEntity.getStatus(),
 					productEntity.isDeleted(),productEntity.getCreatedAt(),productEntity.getUpdatedAt());

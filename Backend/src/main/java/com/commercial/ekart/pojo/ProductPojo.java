@@ -1,10 +1,11 @@
 package com.commercial.ekart.pojo;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
 
-public class ProductPojo {
+public class ProductPojo  implements Serializable{
 
 	private Integer productId;
 	

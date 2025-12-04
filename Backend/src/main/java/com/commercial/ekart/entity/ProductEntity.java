@@ -1,5 +1,6 @@
 package com.commercial.ekart.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
@@ -14,7 +15,7 @@ import jakarta.persistence.Table;
 @Table(name="Product")
 public class ProductEntity {
 	
-	/*
+	/*	
 	 * CREATE TABLE Product (
     product_id INT AUTO_INCREMENT PRIMARY KEY,
     product_name VARCHAR(100) NOT NULL,
